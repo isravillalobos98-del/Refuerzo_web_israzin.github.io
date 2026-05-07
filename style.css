@@ -1,0 +1,344 @@
+/* ========================= */
+/* Configuración general */
+/* ========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Fondo principal animado */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(-45deg,#0f172a,#1e1b4b,#312e81,#7c3aed);
+
+    background-size: 400% 400%;
+
+    animation: fondoAnimado 12s ease infinite;
+
+    color: white;
+}
+
+/* ========================= */
+/* Menú */
+/* ========================= */
+
+.navbar{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background: rgba(0,0,0,0.3);
+
+    backdrop-filter: blur(10px);
+
+    position: fixed;
+
+    width: 100%;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+/* Logo */
+.logo{
+    color: #38bdf8;
+}
+
+/* Menú */
+.menu{
+    display: flex;
+
+    list-style: none;
+
+    gap: 45px;
+}
+
+/* Links del menú */
+.menu a{
+    text-decoration: none !important;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    transition: 0.3s;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+}/* Links */
+.menu a:hover{
+    color: #ec4899;
+
+    text-shadow:0 0 10px #ec4899,
+                0 0 20px #ec4899,
+                0 0 40px #ec4899;
+}
+
+/* ========================= */
+/* Hero */
+/* ========================= */
+
+.hero{
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* Texto principal */
+.hero-text h2{
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    animation: aparecer 2s ease;
+}
+
+/* Párrafo */
+.hero-text p{
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+/* Botón */
+.btn{
+    background: #06b6d4;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* Hover botón */
+.btn:hover{
+    background: #ec4899;
+
+    box-shadow: 0 0 20px #ec4899;
+}
+
+/* ========================= */
+/* Secciones */
+/* ========================= */
+
+.section{
+    padding: 100px 50px;
+
+    text-align: center;
+}
+
+/* Títulos */
+.section h2{
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    color: #38bdf8;
+}
+
+/* ========================= */
+/* Tarjetas */
+/* ========================= */
+
+.cards-section{
+    padding: 100px 50px;
+
+    text-align: center;
+}
+
+/* Contenedor tarjetas */
+.cards{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+}
+
+/* Tarjeta */
+.card{
+    background: rgba(255,255,255,0.1);
+
+    padding: 30px;
+
+    width: 300px;
+
+    border-radius: 20px;
+
+    transition: 0.4s;
+
+    backdrop-filter: blur(10px);
+}
+
+/* Hover tarjeta */
+.card:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 20px #06b6d4;
+}
+
+/* Iconos */
+.card i{
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+    color: #ec4899;
+}
+
+/* ========================= */
+/* Lista */
+/* ========================= */
+
+.lista{
+    list-style: none;
+
+    margin-top: 20px;
+}
+
+.lista li{
+    margin: 15px 0;
+
+    font-size: 20px;
+}
+
+/* ========================= */
+/* Contacto */
+/* ========================= */
+
+.contact{
+    padding: 100px 50px;
+
+    text-align: center;
+}
+
+/* Formulario */
+form{
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* Inputs */
+input, textarea{
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+}
+
+/* Botón */
+button{
+    background: #06b6d4;
+
+    color: white;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover botón */
+button:hover{
+    background: #ec4899;
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+
+footer{
+    text-align: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,0.3);
+}
+
+/* ========================= */
+/* Animaciones */
+/* ========================= */
+
+/* Animación de entrada */
+@keyframes aparecer{
+
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* ========================= */
+/* Fondo animado */
+/* ========================= */
+
+@keyframes fondoAnimado{
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
